@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/superon/static/css/main.38c41c2a.css",
-    "main.js": "/superon/static/js/main.286b07df.js",
+    "main.js": "/superon/static/js/main.324c486b.js",
     "static/js/787.44714231.chunk.js": "/superon/static/js/787.44714231.chunk.js",
     "index.html": "/superon/index.html",
     "main.38c41c2a.css.map": "/superon/static/css/main.38c41c2a.css.map",
-    "main.286b07df.js.map": "/superon/static/js/main.286b07df.js.map",
+    "main.324c486b.js.map": "/superon/static/js/main.324c486b.js.map",
     "787.44714231.chunk.js.map": "/superon/static/js/787.44714231.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38c41c2a.css",
-    "static/js/main.286b07df.js"
+    "static/js/main.324c486b.js"
   ]
 }
