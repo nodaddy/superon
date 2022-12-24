@@ -32,7 +32,7 @@ function OtpAuthDesktop(props) {
     }
 
     const autoVerifyOTP = () => {
-        postRequest('/auth/otp/verify', { otp: otp }).then((res)=>{
+        postRequest('/auth/otp/verify', { otp: otp, cellphoneNumber: phoneNumber }).then((res)=>{
             setVerifyingOtp(false);
             setDisableButtonFlag(false);
             proceed();

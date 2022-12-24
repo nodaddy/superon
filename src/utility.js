@@ -7,3 +7,6 @@ export const PageTypes = {
     weeklyPlan: 'Weekly Plan',
     request: 'Request',
 }
+
+
+export const sessionStorageUserInfoKey = 'userSuperon';

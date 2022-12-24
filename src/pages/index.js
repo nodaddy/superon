@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FlexBox } from '../components/Containers';
 import NavigationBar from '../components/NavigationBar';
 import { PageTypes } from '../utility';
+import Attendance from './attendance/Attendance';
 import HomeDesktop from './home/HomeDesktop';
 import TargetDesktop from './target/TargetDesktop';
 
@@ -43,7 +44,7 @@ const renderTabConent = () => {
             return <TargetDesktop />
             break;
         case Object.keys(PageTypes)[3].toString():
-            return <HomeDesktop />
+            return <Attendance />
             break;
         case Object.keys(PageTypes)[4].toString():
             return <HomeDesktop />

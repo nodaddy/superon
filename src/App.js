@@ -8,6 +8,8 @@ import TargetDesktop from './pages/target/TargetDesktop';
 import Pages from './pages';
 import { Loading3QuartersOutlined, LoadingOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
+import { getRequest } from './services';
+import { sessionStorageUserInfoKey } from './utility';
 
 export const primaryColor = '#FB892E';
 export const greyColor = '#DBDBDB';
@@ -21,6 +23,9 @@ function App() {
     if(window.innerWidth < window.innerHeight){
       setIsMobile(true);
     }
+    getRequest('/user').then(res => {
+      sessionStorage.setItem(sessionStorageUserInfoKey, JSON.stringify(res.data));
+    })
   }, [window.innerWidth, window.innerHeight]);
 
   return (
