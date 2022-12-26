@@ -1,6 +1,6 @@
 export const PageTypes = {
     home: 'Home',
-    orderTracking: 'Order Tracking',
+    // orderTracking: 'Order Tracking',
     target: 'Target',
     attendance: 'Attendance',
     dailyWorking: 'Daily Working',

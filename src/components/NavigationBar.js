@@ -48,6 +48,21 @@ function NavigationBar(props) {
 
                     </Col>
                 </Row>
+                <FlexBox style={{
+                    backgroundColor: 'white',
+                    padding: '10px 200px',
+                    borderBottom: '1px solid  #CACCCF'
+                }} children={ 
+                    <>
+                   {
+                    Object.keys(PageTypes).map( key => {
+                        return <span style={{cursor: 'pointer', margin: 'auto'}}><NavLink 
+                        to={`/${key}`}
+                        >{PageTypes[key]}</NavLink></span>
+                    })
+                   } 
+                   </>
+                } />
                 
             </div>
     );

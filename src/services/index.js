@@ -147,6 +147,86 @@ export const getRequest = (path) => {
                     status: 200
                 }
             );
+            case '/requests/all':
+            return returnPromiseWithData(
+                {
+                    data: {
+                        sample:{
+                                requests: [
+                                    {
+                                        item: 'diary',
+                                        total: 15, 
+                                        applied: 2,
+                                    },
+                                    {
+                                        item: 'pen',
+                                        total: 15, 
+                                        applied: 2
+                                    }
+                                ],
+                                approvals: [
+                                    {
+                                        date : '08 July 22',        //string
+                                        sample: 'diary',           //string
+                                        status: 'Pending',          //string
+                                    },
+                                    {
+                                        date : '08 July 22',        //string
+                                        sample: 'diary',           //string
+                                        status: 'Pending',          //string
+                                    },
+                                    {
+                                        date : '08 July 22',        //string
+                                        sample: 'diary',           //string
+                                        status: 'Pending',          //string
+                                    }
+                                ]
+                            },
+                        catalogue: {
+                            requests: [
+                                {
+                                    item: 'Brochure',
+                                    total: 15, 
+                                    applied: 2,
+                                },
+                                {
+                                    item: 'Diary',
+                                    total: 15, 
+                                    applied: 2
+                                },
+                                {
+                                    item: 'Item 3',
+                                    total: 15, 
+                                    applied: 2,
+                                },
+                                {
+                                    item: 'Item 4',
+                                    total: 15, 
+                                    applied: 2
+                                }
+                            ],
+                            approvals: [
+                                {
+                                    date : '08 July 22',        //string
+                                    sample: 'diary',           //string
+                                    status: 'Pending',          //string
+                                },
+                                {
+                                    date : '08 July 22',        //string
+                                    sample: 'diary',           //string
+                                    status: 'Pending',          //string
+                                },
+                                {
+                                    date : '08 July 22',        //string
+                                    sample: 'diary',           //string
+                                    status: 'Pending',          //string
+                                }
+                            ]
+                        }
+                    },
+                    status: 200
+                }
+            );
             default:
                 alert('api under construction');
     }
@@ -193,6 +273,14 @@ export const postRequest = (path, payload) => {
             // format of dates -> 'Mon, 26 Dec 2022 10:22:53 GMT'
             // leaveType can have either of these two values: 1. casual 2. lossofpay
             // timeoff can have either of these three values: 1. fullday 2. firsthalf 3. secondhalf
+            return returnPromiseWithData(
+                {
+                    data: {},
+                    status: 200
+                }
+            );
+        case '/request/apply':
+            // { item }
             return returnPromiseWithData(
                 {
                     data: {},

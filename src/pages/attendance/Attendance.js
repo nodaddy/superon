@@ -37,6 +37,7 @@ const PunchCard = (cardData) => {
 function Attendance(props) {
 
     const tabTypes = ['punch', 'attendance', 'leave'];
+    
 
     const date = new Date();
     const currentMonth = date.toString().split(' ')[1] + ' ' + date.toString().split(' ')[3];

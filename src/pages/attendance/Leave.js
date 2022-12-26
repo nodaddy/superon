@@ -25,10 +25,10 @@ function Leave(props) {
             <FlexBox justifyContent='start' style={{width: '90%'}}>
                 <button onClick={()=>{
                     setCurrentTab('request');
-                }} style={{cursor: 'pointer', padding: '20px 40px', border: '0px', color: currentTab === 'request' ? primaryColor : 'black', backgroundColor: 'white' }}>Request</button>
+                }} style={{cursor: 'pointer', padding: '20px 40px', border: '0px', borderBottom: currentTab === 'request' ? `2px solid ${primaryColor}` : '0px', color: currentTab === 'request' ? primaryColor : 'black', backgroundColor: 'white' }}>Request</button>
                 <button onClick={()=>{
                     setCurrentTab('approval');
-                }} style={{cursor: 'pointer',padding: '20px 40px', border: '0px', color: currentTab === 'approval' ? primaryColor : 'black', backgroundColor: 'white' }}>Approvals</button>
+                }} style={{cursor: 'pointer',padding: '20px 40px', border: '0px', borderBottom: currentTab === 'approval' ? `2px solid ${primaryColor}` : '0px', color: currentTab === 'approval' ? primaryColor : 'black', backgroundColor: 'white' }}>Approvals</button>
             </FlexBox>
 
         <br/>

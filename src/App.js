@@ -10,6 +10,8 @@ import { Loading3QuartersOutlined, LoadingOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { getRequest } from './services';
 import { sessionStorageUserInfoKey } from './utility';
+import Attendance from './pages/attendance/Attendance';
+import Request from './pages/requet/Request';
 
 export const primaryColor = '#FB892E';
 export const greyColor = '#DBDBDB';
@@ -33,7 +35,9 @@ function App() {
       <LoadingOutlined style={{fontSize: '40px'}} />
     </div>:
     <div className="App">
+
       <Router basename='/superon'>
+      <NavigationBar profileName='Alexa'/>
         <Routes>
         <Route path='/' element={
               <>
@@ -42,11 +46,24 @@ function App() {
             }/>
             <Route path='/home' element={
               <>
-                <NavigationBar profileName='Alexa'/>
-
-               <Pages />
+               <HomeDesktop />
               </>
             }/> 
+            <Route path='/target' element={
+              <>
+               <TargetDesktop />
+              </>
+            }/>
+            <Route path='/attendance' element={
+              <>
+               <Attendance/>
+              </>
+            }/>
+            <Route path='/request' element={
+              <>
+               <Request/>
+              </>
+            }/>
         </Routes>
       </Router>
     </div>
